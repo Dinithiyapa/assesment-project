@@ -37,11 +37,11 @@ jobs:
           sudo mkdir nodejs-app
           cd nodejs-app
 
-          # # Copy the Dockerfile, docker-compose.yml, and index.js to nodejs-app directory
-          # echo "Copying Dockerfile, docker-compose.yml, and index.js to the current directory..."
-          # sudo cp $GITHUB_WORKSPACE/Dockerfile ./Dockerfile
-          # sudo cp $GITHUB_WORKSPACE/docker-compose.yml ./docker-compose.yml
-          # sudo cp $GITHUB_WORKSPACE/index.js ./index.js  # Copy index.js
+          # Copy the Dockerfile, docker-compose.yml, and index.js to nodejs-app directory
+          echo "Copying Dockerfile, docker-compose.yml, and index.js to the current directory..."
+          sudo cp $GITHUB_WORKSPACE/Dockerfile ./Dockerfile
+          sudo cp $GITHUB_WORKSPACE/docker-compose.yml ./docker-compose.yml
+          sudo cp $GITHUB_WORKSPACE/index.js ./index.js  # Copy index.js
 
           # # Navigate back to the home directory to copy nginx.conf
           # cd ..
