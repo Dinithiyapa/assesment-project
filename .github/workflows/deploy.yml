@@ -32,10 +32,10 @@ jobs:
           echo "Removing existing nodejs-app directory..."
           sudo rm -rf nodejs-app || true
 
-          # # Create a new nodejs-app directory and navigate into it
-          # echo "Creating and navigating into nodejs-app directory..."
-          # sudo mkdir nodejs-app
-          # cd nodejs-app
+          # Create a new nodejs-app directory and navigate into it
+          echo "Creating and navigating into nodejs-app directory..."
+          sudo mkdir nodejs-app
+          cd nodejs-app
 
           # # Copy the Dockerfile, docker-compose.yml, and index.js to nodejs-app directory
           # echo "Copying Dockerfile, docker-compose.yml, and index.js to the current directory..."
