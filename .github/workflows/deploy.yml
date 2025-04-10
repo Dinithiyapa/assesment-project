@@ -58,5 +58,16 @@ jobs:
         port: ${{ secrets.SSH_PORT }}
         script: |
           echo "Nice Job!!!"
+          cd nodejs-app
+          # Stop and remove all running containers
+          echo "Stopping and removing all containers..."
+          docker stop $(docker ps -aq) || true
+          docker rm $(docker ps -aq) || true
+          echo "Starting Docker containers with Docker Compose..."
+          docker-compose up -d
+          echo "Deployment complete!"
+          
+
+        
           
           
