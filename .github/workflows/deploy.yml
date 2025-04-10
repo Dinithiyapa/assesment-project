@@ -26,8 +26,7 @@ jobs:
         script: |
           echo "SSH into EC2 Instance Successful"
 
-          # Navigate to the EC2 home directory
-          cd /home/ubuntu  # Or your user's home directory if different
+       
 
           # Remove the existing nodejs-app directory (if it exists)
           echo "Removing existing nodejs-app directory..."
