@@ -27,7 +27,7 @@ jobs:
           echo "SSH into EC2 Instance Successful"
           
           # Navigate to the project directory on the EC2 instance
-          cd /path/to/your/nodejs-app  # Update with the correct path to your app on the EC2
+          cd nodejs-app  # Update with the correct path to your app on the EC2
 
           # Stop and remove all running containers
           echo "Stopping and removing all containers..."
