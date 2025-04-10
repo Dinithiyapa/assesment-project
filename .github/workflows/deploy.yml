@@ -37,6 +37,9 @@ jobs:
           sudo mkdir nodejs-app
           cd nodejs-app
 
+          echo "Listing files in GITHUB_WORKSPACE"
+          ls $GITHUB_WORKSPACE
+
           # Copy the Dockerfile, docker-compose.yml, and index.js to nodejs-app directory
           echo "Copying Dockerfile, docker-compose.yml, and index.js to the current directory..."
           sudo cp $GITHUB_WORKSPACE/Dockerfile ./Dockerfile
