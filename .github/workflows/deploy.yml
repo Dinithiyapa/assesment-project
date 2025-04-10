@@ -26,42 +26,16 @@ jobs:
         script: |
           echo "SSH into EC2 Instance Successful"
 
-       
-
-          # Remove the existing nodejs-app directory (if it exists)
-          echo "Removing existing nodejs-app directory..."
-          sudo rm -rf nodejs-app || true
-
-          # Create a new nodejs-app directory and navigate into it
-          echo "Creating and navigating into nodejs-app directory..."
-          sudo mkdir nodejs-app
+    
           cd nodejs-app
-
-          echo "Listing files in GITHUB_WORKSPACE"
-          ls $GITHUB_WORKSPACE
-
-          # Copy the Dockerfile, docker-compose.yml, and index.js to nodejs-app directory
-          echo "Copying Dockerfile, docker-compose.yml, and index.js to the current directory..."
-          sudo cp $GITHUB_WORKSPACE/Dockerfile ./Dockerfile
-          sudo cp $GITHUB_WORKSPACE/docker-compose.yml ./docker-compose.yml
-          sudo cp $GITHUB_WORKSPACE/index.js ./index.js  # Copy index.js
-
-          # # Navigate back to the home directory to copy nginx.conf
-          # cd ..
-          # echo "Copying nginx.conf to /etc/nginx/nginx.conf..."
-          # sudo mkdir -p /etc/nginx  # Ensure the directory exists
-          # sudo cp $GITHUB_WORKSPACE/nginx.conf /etc/nginx/nginx.conf
-
-          # # Navigate back to the nodejs-app directory
-          # cd nodejs-app
 
           # # Stop and remove any running containers (if any)
           # echo "Stopping and removing all containers..."
-          # sudo docker stop $(docker ps -aq) || true
-          # sudo docker rm $(docker ps -aq) || true
+          sudo docker stop $(docker ps -aq) || true
+          sudo docker rm $(docker ps -aq) || true
 
           # # Start the Docker containers using Docker Compose
           # echo "Starting Docker containers with Docker Compose..."
-          # sudo docker-compose up -d
+          sudo docker-compose up -d
 
           # echo "Deployment complete!"
