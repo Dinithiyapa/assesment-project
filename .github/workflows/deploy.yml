@@ -54,7 +54,7 @@ jobs:
       with:
         host: ${{ secrets.HOST }}
         username: ${{ secrets.SSH_USER }}
-        key: ${{ secrets.SSH_KEY }}
+        key: ${{ secrets.KEY }}
         port: ${{ secrets.SSH_PORT }}
         script: |
           echo "Nice Job!!!"
