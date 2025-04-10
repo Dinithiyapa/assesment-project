@@ -61,3 +61,4 @@ jobs:
           git pull origin main  # Pull latest changes
           docker-compose down  # Stop running containers
           docker-compose up -d  # Start containers in detached mode
+          debug: true
